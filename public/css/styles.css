@@ -9,6 +9,21 @@
   text-decoration: none;
   transition: all 0.25s;
 }
+.btn.btn-icon {
+  padding: 8px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.btn.btn-icon img {
+  width: 16px;
+}
+.btn.btn-icon:hover {
+  border-color: rgba(0, 0, 0, 0.3);
+}
 .btn.btn-info {
   border-color: #2f6ed5;
   color: #2f6ed5;
@@ -69,11 +84,24 @@
   padding: 16px;
   box-shadow: rgba(103, 111, 123, 0.2) 0px 11px 4px -7px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: 0.25s;
 }
 .task .badge {
   margin-left: auto;
   margin-right: 0;
 }
+.task .text {
+  margin-left: 12px;
+  color: rgb(78, 85, 98);
+}
+.task .text .date {
+  font-size: 12px;
+}
+.task:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: rgba(103, 111, 123, 0.2) 0px 12px 4px -4px;
+}
+
 .add-btn {
   display: flex;
   align-items: center;
@@ -89,6 +117,11 @@
 .task-details-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.task-details-tools {
+  display: flex;
   align-items: center;
 }
 
@@ -112,13 +145,14 @@
   height: 90px;
   border-radius: 50%;
   overflow: hidden;
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: rgba(103, 111, 123, 0.1) 0px 8px 32px -4px;
 }
-.avatar > img {
+.avatar > .user-image {
   width: 100%;
 }
 
@@ -190,6 +224,22 @@
   outline: none;
 }
 
+.filter select {
+  padding: 12px 16px;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 100%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.filter select:focus {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
 html {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -197,6 +247,7 @@ html {
   font-variation-settings: "slnt" 0;
   font-size: 16px;
   font-weight: normal;
+  color: rgb(78, 85, 98);
 }
 
 .main-wrapper {

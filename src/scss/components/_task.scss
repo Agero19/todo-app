@@ -18,13 +18,23 @@
   box-shadow: rgba(103, 111, 123, 0.2) 0px 11px 4px -7px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
+  transition: .25s;
+
   .badge {
     margin-left: auto;
     margin-right: 0;
   }
 
   .text {
+    margin-left: 12px;
+    color: rgb(78, 85, 98);
 
+    .date { font-size: 12px;}
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: rgba(103, 111, 123, 0.2) 0px 12px 4px -4px;
   }
 }
 
@@ -43,5 +53,10 @@
 .task-details-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.task-details-tools {
+  display: flex;
   align-items: center;
 }

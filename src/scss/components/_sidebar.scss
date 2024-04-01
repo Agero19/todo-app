@@ -19,6 +19,7 @@
   height: 90px;
   border-radius: 50%;
   overflow: hidden;
+  margin-bottom: 12px;
 
   display: flex;
   align-items: center;
@@ -27,7 +28,7 @@
   border: 1px solid rgba(#000, .2);
   box-shadow: rgba(103, 111, 123, 0.1) 0px 8px 32px -4px;
 
-  > img {
+  > .user-image {
     width: 100%;
   }
 }
