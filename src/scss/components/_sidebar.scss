@@ -1,0 +1,60 @@
+.sidebar {
+  width: 100%;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  border-right: 1px solid rgba(#000, .1);
+}
+
+.btn-logout {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(#000, .2);
+  box-shadow: rgba(103, 111, 123, 0.1) 0px 8px 32px -4px;
+
+  > img {
+    width: 100%;
+  }
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .stats-item {
+    padding: 24px 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+
+    font-size: 12px;
+
+    > * {
+      margin-bottom: 8px;
+    }
+    
+    > *:last-child {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}

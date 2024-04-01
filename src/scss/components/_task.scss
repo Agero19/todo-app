@@ -1,0 +1,47 @@
+
+.tasks-wrapper {
+  // padding: 24px;
+}
+
+.tasks-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.task {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+
+  box-shadow: rgba(103, 111, 123, 0.2) 0px 11px 4px -7px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  .badge {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .text {
+
+  }
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.task-details {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+.task-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

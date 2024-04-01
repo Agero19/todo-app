@@ -1,0 +1,24 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass src/scss:public/css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agero19/todo-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Agero19/todo-app/issues"
+  },
+  "homepage": "https://github.com/Agero19/todo-app#readme",
+  "devDependencies": {
+    "sass": "^1.72.0"
+  }
+}

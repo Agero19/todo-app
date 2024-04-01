@@ -1,0 +1,40 @@
+
+@import 'components/buttons';
+@import 'components/grid';
+@import 'components/header';
+@import 'components/task';
+@import 'components/sidebar';
+@import 'components/badges';
+@import 'components/forms';
+
+
+html {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.main-wrapper {
+  display: flex;
+  padding: 40px 24px;
+}
+
+.tasks-wrapper {
+  display: flex;
+
+  > * { flex-basis: 50%;}
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+
+// Utilities
+.w-100 {
+  width: 100%;
+}

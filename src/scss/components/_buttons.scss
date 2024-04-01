@@ -1,0 +1,49 @@
+.btn {
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid;
+  margin-right: 8px;
+  margin-bottom: 16px;
+  padding: 8px 24px;
+  font-size: 14px;
+  text-decoration: none;
+
+  transition: all .25s;
+
+  &.btn-info {
+    border-color: #2f6ed5;
+    color: #2f6ed5;
+
+    &:hover {
+      background-color: #2f6ed5;
+      color: #fff;
+    }
+  }
+  &.btn-success {
+    border-color: #33b36b;
+    color: #33b36b;
+
+    &:hover {
+      background-color: #33b36b;
+      color: #fff;
+    }
+  }
+  &.btn-warning {
+    border-color: #fc9231;
+    color: #fc9231;
+
+    &:hover {
+      background-color: #fc9231;
+      color: #fff;
+    }
+  }
+  &.btn-danger {
+    border-color: #f03d3d;
+    color: #f03d3d;
+
+    &:hover {
+      background-color: #f03d3d;
+      color: #fff;
+    }
+  }
+}
