@@ -1,8 +1,5 @@
-
-.tasks-wrapper {
-  // padding: 24px;
-}
-
+// Tasks
+// -------------------------
 .tasks-list {
   list-style-type: none;
   padding: 0;
@@ -32,8 +29,9 @@
     .date { font-size: 12px;}
   }
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+  &:hover,
+  &.active {
+    background-color: rgba(0, 0, 0, 0.01);
     box-shadow: rgba(103, 111, 123, 0.2) 0px 12px 4px -4px;
   }
 }
@@ -58,5 +56,38 @@
 
 .task-details-tools {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: end;
+  flex-basis: 90px;
+
+  .badge-wrap {
+    width: 100%;
+    margin-bottom: 8px;
+    text-align: right;
+  }
+}
+
+.details-info {
+  .title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .date {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+
+    img {
+      margin-right: 6px;
+      margin-top: -2px;
+    }
+  }
+}
+
+.task-details-body {
+  p {
+    line-height: 1.5;
+  }
 }
