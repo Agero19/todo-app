@@ -48,5 +48,12 @@ class User {
         return password_verify($inputPassword, $this->password);
     }
 
+    public function toArray() {
+        return array(
+            'username' => $this->username,
+            'password' => $this->password
+        );
+    }
+
     // Other methods for user-related functionalities such as login, logout, etc.
 }
