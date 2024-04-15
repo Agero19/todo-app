@@ -10,12 +10,13 @@
   transition: all 0.25s;
 }
 .btn.btn-icon {
-  padding: 8px;
+  padding: 6px;
   width: 18px;
   height: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .btn.btn-icon img {
@@ -23,6 +24,9 @@
 }
 .btn.btn-icon:hover {
   border-color: rgba(0, 0, 0, 0.3);
+}
+.btn.btn-icon + .btn-icon {
+  margin-left: 8px;
 }
 .btn.btn-info {
   border-color: #2f6ed5;
@@ -67,7 +71,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px 24px;
+  padding: 0 16px 16px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -97,8 +101,8 @@
 .task .text .date {
   font-size: 12px;
 }
-.task:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+.task:hover, .task.active {
+  background-color: rgba(0, 0, 0, 0.01);
   box-shadow: rgba(103, 111, 123, 0.2) 0px 12px 4px -4px;
 }
 
@@ -122,7 +126,33 @@
 
 .task-details-tools {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: end;
+  flex-basis: 90px;
+}
+.task-details-tools .badge-wrap {
+  width: 100%;
+  margin-bottom: 8px;
+  text-align: right;
+}
+
+.details-info .title {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.details-info .date {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.details-info .date img {
+  margin-right: 6px;
+  margin-top: -2px;
+}
+
+.task-details-body p {
+  line-height: 1.5;
 }
 
 .sidebar {
