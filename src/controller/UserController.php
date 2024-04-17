@@ -19,7 +19,13 @@ class UserController {
         $user = new User($username, $password);
 
         // Save user data to storage
-        $jsonStorage = new JsonStorage('users.json');
+        $jsonFilePath = realpath(__DIR__ . '/../../data/users.json');
+        
+        if (!$jsonFilePath) {
+            echo "Error: Unable to resolve the file path.";
+        }
+        $jsonStorage = new JsonStorage($jsonFilePath);
+
         $jsonStorage->addItem($user->getUserId(), $user->toArray());
 
         // Return the created user object or a success message
@@ -27,31 +33,35 @@ class UserController {
     }
 
     // Method to authenticate a user
-    public function authenticateUser($username, $password) {
-        // Validate input data
-        if (empty($username) || empty($password)) {
-            return false; // Return false if inputs are empty
-        }
-
-        // Retrieve user data from storage
-        $jsonStorage = new JsonStorage('users.json');
-        $userData = $jsonStorage->getItem($username);
-
-        if (!$userData) {
-            return false; // User not found
-        }
-
-        // Create a User object from retrieved data
-        $user = new User($userData['username'], $userData['password']);
-
-        // Verify password
-        if (!$user->verifyPassword($password)) {
-            return false; // Incorrect password
-        }
-
-        // Authentication successful, return the user object
-        return $user;
+   public function authenticateUser($username, $password) {
+    // Validate input data
+    if (empty($username) || empty($password)) {
+        return false; // Return false if inputs are empty
     }
+
+    // Retrieve user data from storage
+    $jsonStorage = new JsonStorage(realpath(__DIR__ . '/../../data/users.json'));
+    $userData = $jsonStorage->getItem($username);
+
+    if (!$userData) {
+        return false; // User not found
+    }
+
+    // Hash the password retrieved from storage
+    $hashedPassword = $userData['password'];
+
+    // Create a User object from retrieved data
+    $user = new User($userData['username'], $hashedPassword);
+
+    // Verify password
+    if (!$user->verifyPassword($password)) {
+        return false; // Incorrect password
+    }
+
+    // Authentication successful, return the user object
+    return $user;
+}
+
 
     // Method to log out a user
     public function logoutUser() {

@@ -6,20 +6,28 @@ require_once '../src/utils/JsonStorage.php';
 // Initialize the UserController
 $userController = new UserController();
 
+// Initialize variables for form validation and error handling
+$loginError = "";
+
 // Check if the login form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
     // Retrieve form data
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    // Authenticate user
-    $user = $userController->authenticateUser($username, $password);
-    if ($user) {
-        // Redirect to dashboard or another page on successful login
-        header("Location: index.php");
-        exit();
+    // Validate input
+    if (empty($username) || empty($password)) {
+        $loginError = "Please enter both username and password";
     } else {
-    $loginError = "Invalid username or password"; 
+        // Authenticate user
+        $user = $userController->authenticateUser($username, $password);
+        if ($user) {
+            // Redirect to dashboard or another page on successful login
+            header("Location: index.php");
+            exit();
+        } else {
+            $loginError = "Invalid username or password";
+        }
     }
 }
 ?>
@@ -40,8 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
             <div class="main-wrapper">
                 <div class="login-form">
                     <h2>Login</h2>
-                    <?php if (isset($loginError)) : ?>
-                        <p class="error"><?php echo $loginError; ?></p>
+                    <?php if (!empty($loginError)) : ?>
+                        <p class="error"><?php echo htmlspecialchars($loginError); ?></p>
                     <?php endif; ?>
                     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                         <div class="form-group">

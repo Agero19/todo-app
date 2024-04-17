@@ -3,12 +3,14 @@
     require_once '../src/models/User.php';
     require_once '../src/utils/JsonStorage.php';
 
-// Initialize the UserController
+    // Initialize the UserController
     $userController = new UserController();
 
     // Initialize variables for form validation and error handling
-    $username = $password = "";
-    $usernameErr = $passwordErr = $registrationError = "";
+    $username = $password = $confirmPassword = "";
+    $usernameErr = $passwordErr = $confirmPasswordErr = $registrationError = "";
+
+    
 
     // Check if the registration form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["register"])) {
@@ -17,7 +19,10 @@
             $usernameErr = "Username is required";
         } else {
             $username = $_POST["username"];
-            // Additional validation can be added here
+            // Additional validation for username
+            if (!preg_match("/^[a-zA-Z0-9_]{4,}$/", $username)) {
+                $usernameErr = "Username must be at least 4 characters long and contain only letters, numbers, and underscores";
+            }
         }
 
         // Validate password
@@ -25,11 +30,27 @@
             $passwordErr = "Password is required";
         } else {
             $password = $_POST["password"];
-            // Additional validation can be added here
+            // Additional validation for password
+            if (strlen($password) < 8) {
+                $passwordErr = "Password must be at least 8 characters long";
+            }
+            // Add more password strength checks if needed
         }
 
+        // Validate confirm password
+        if (empty($_POST["confirmPassword"])) {
+            $confirmPasswordErr = "Please confirm your password";
+        } else {
+            $confirmPassword = $_POST["confirmPassword"];
+            if ($confirmPassword !== $password) {
+                $confirmPasswordErr = "Passwords do not match";
+            }
+        }
+
+        
+
         // If there are no validation errors, proceed with user registration
-        if (empty($usernameErr) && empty($passwordErr)) {
+        if (empty($usernameErr) && empty($passwordErr) && empty($confirmPasswordErr)) {
             // Register user
             $result = $userController->registerUser($username, $password);
             if ($result) {
@@ -74,6 +95,11 @@
                             <span class="error"><?php echo $passwordErr; ?></span>
                         </div>
                         <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" value="<?php echo htmlspecialchars($confirmPassword); ?>" required>
+                            <span class="error"><?php echo $confirmPasswordErr; ?></span>
+                        </div>
+                        <div class="form-group">
                             <button type="submit" name="register">Register</button>
                         </div>
                     </form>
@@ -87,6 +113,3 @@
 </body>
 
 </html>
-
-
-
