@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
         header("Location: index.php");
         exit();
     } else {
-        echo"<p>Invalid username or password</p>";
+    $loginError = "Invalid username or password"; 
     }
 }
 ?>
