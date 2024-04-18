@@ -10,7 +10,7 @@ run - `npm run scss` for start
 > application using HTML, CSS, PHP to demonstrate skillset aquired during my
 > university's Web development course.
 
-#### Minimal requirements
+### Minimal requirements
 
 - Inscription form. To register user should give a username and a password.
 - Page aimed to treat this forml, which will insert user info into a file or a

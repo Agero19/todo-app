@@ -29,44 +29,11 @@
         <!-- Sidebar -->
         <aside class="sidebar">
 
-          <div class="avatar">
-
-            <!-- User default avatar -->
-            <img class="user-image"
-              src="public/img/avatar-photo.avif"
-              alt="Avatar">
-
-            <!-- User have picture -->
-            <!-- <img class="user-icon"
-              src="public/img/user.svg"
-              alt="Avatar"> -->
-          </div>
-
-          <h2>Platon Motulko</h2>
-
-          <div class="stats">
-            <div class="stats-item">
-              <span>ToDo</span>
-              <span>5</span>
-            </div>
-            <div class="stats-item">
-              <span>In Progress</span>
-              <span>3</span>
-            </div>
-            <div class="stats-item">
-              <span>Done</span>
-              <span>2</span>
-            </div>
-          </div>
-
           <a href="login.php"
             class="btn btn-info btn-logout">
             Login
           </a>
-          <a href="#"
-            class="btn btn-info btn-logout">
-            Logout
-          </a>
+        
         </aside>
 
         <!-- Main Content -->
@@ -99,81 +66,7 @@
 
             <!-- Tasks List -->
             <ul class="tasks-list">
-              <li class="task-item">
-                <a href="#"
-                  class="task">
-                  <div class="icon">
-                    <img src="public/img/check-circle.svg"
-                      alt="Checked">
-                  </div>
-                  <div class="text">
-                    <h4>Task Title</h4>
-                    <div class="date">Due - 24 may 2024</div>
-                  </div>
-
-                  <span class="badge success">Success</span>
-                </a>
-              </li>
-              <li class="task-item">
-                <a href="#"
-                  class="task">
-                  <div class="icon">
-                    <img src="public/img/check-circle.svg"
-                      alt="Checked">
-                  </div>
-                  <div class="text">
-                    <h4>Task Title</h4>
-                    <div class="date">Due - 24 may 2024</div>
-                  </div>
-
-                  <span class="badge info">Success</span>
-                </a>
-              </li>
-              <li class="task-item">
-                <a href="#"
-                  class="task">
-                  <div class="icon">
-                    <img src="public/img/check-circle.svg"
-                      alt="Checked">
-                  </div>
-                  <div class="text">
-                    <h4>Task Title</h4>
-                    <div class="date">Due - 24 may 2024</div>
-                  </div>
-
-                  <span class="badge danger">Success</span>
-                </a>
-              </li>
-              <li class="task-item">
-                <a href="#"
-                  class="task">
-                  <div class="icon">
-                    <img src="public/img/check-circle.svg"
-                      alt="Checked">
-                  </div>
-                  <div class="text">
-                    <h4>Task Title</h4>
-                    <div class="date">Due - 24 may 2024</div>
-                  </div>
-
-                  <span class="badge success">Success</span>
-                </a>
-              </li>
-              <li class="task-item">
-                <a href="#"
-                  class="task">
-                  <div class="icon">
-                    <img src="public/img/check-circle.svg"
-                      alt="Checked">
-                  </div>
-                  <div class="text">
-                    <h4>Task Title</h4>
-                    <div class="date">Due - 24 may 2024</div>
-                  </div>
-
-                  <span class="badge warning">Success</span>
-                </a>
-              </li>
+              
 
               <li class="add-btn">
                 <a href="#"
@@ -187,29 +80,6 @@
             <!-- Task Details -->
             <div class="task-details">
 
-              <div class="task-details-header">
-                <h2>Task Title</h2>
-
-                <div class="task-details-tools">
-                  <a href="#"
-                    class="btn btn-icon btn-edit">
-                    <img src="public/img/edit-2.svg"
-                      alt="Edit">
-                  </a>
-
-                  <a href="#"
-                    class="btn btn-icon btn-delete">
-                    <img src="public/img/trash.svg"
-                      alt="Remove">
-                  </a>
-                </div>
-              </div>
-
-              <div class="task-details-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sunt, tempora assumenda corporis, minus
-                  voluptates eligendi inventore possimus iusto accusamus vero quod maxime aspernatur sed architecto
-                  voluptas quia rem odio?</p>
-              </div>
 
             </div>
           </div>
