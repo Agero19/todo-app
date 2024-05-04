@@ -193,20 +193,41 @@
             <div class="task-details">
 
               <div class="task-details-header">
-                <h2>Task Title</h2>
-
+                <div class="details-info">
+                  <h4 class="title">Project X</h4>
+                  <div class="date">
+                    <img src="public/img/calendar.svg"
+                      width="16"
+                      height="16"
+                      alt="Date icon">
+                    Due - 2024-05-30
+                  </div>
+                </div>
                 <div class="task-details-tools">
+                  <div class="badge-wrap">
+                    <span class="badge success">completed</span>
+                  </div>
+
                   <a href="#"
                     class="btn btn-icon btn-edit">
                     <img src="public/img/edit-2.svg"
+                      width="16"
+                      height="16"
                       alt="Edit">
                   </a>
 
-                  <a href="#"
-                    class="btn btn-icon btn-delete">
-                    <img src="public/img/trash.svg"
-                      alt="Remove">
-                  </a>
+                  <form action=""
+                    method="post">
+                    <input type="hidden"
+                      name="id"
+                      value="3">
+                    <button class="btn btn-icon btn-delete">
+                      <img src="public/img/trash.svg"
+                        width="16"
+                        height="16"
+                        alt="Remove">
+                    </button>
+                  </form>
                 </div>
               </div>
 
