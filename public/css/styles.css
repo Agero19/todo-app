@@ -65,6 +65,7 @@
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .main-header {
@@ -234,7 +235,7 @@
   border-color: #f03d3d;
 }
 
-.form-input {
+.form-input, .login-form .form-control {
   position: relative;
   color: #333;
   font-size: 16px;
@@ -249,7 +250,7 @@
   transition: all 0.3s;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.form-input:focus {
+.form-input:focus, .login-form .form-control:focus {
   border: 1px solid rgba(0, 0, 0, 0.3);
   outline: none;
 }
@@ -268,6 +269,29 @@
 .filter select:focus {
   border: 1px solid rgba(0, 0, 0, 0.3);
   outline: none;
+}
+
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  width: calc(100% - 24px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  box-shadow: rgba(103, 111, 123, 0.2) 0px 11px 4px -7px;
+}
+.login-form .form-control {
+  width: 100%;
+  display: block;
+}
+.login-form .form-label + .form-control {
+  margin-top: 12px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -297,7 +321,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .w-100 {
-  width: 100%;
+  width: 100% !important;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
