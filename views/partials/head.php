@@ -7,7 +7,7 @@
     <title>Todo App - Platon Motulko</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
     <!-- Google fFont Import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
