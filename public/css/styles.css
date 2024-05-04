@@ -235,7 +235,7 @@
   border-color: #f03d3d;
 }
 
-.form-input, .login-form .form-control {
+.form-input, .task-form-wrap .task-form .form-control, .login-form .form-control {
   position: relative;
   color: #333;
   font-size: 16px;
@@ -250,7 +250,7 @@
   transition: all 0.3s;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.form-input:focus, .login-form .form-control:focus {
+.form-input:focus, .task-form-wrap .task-form .form-control:focus, .login-form .form-control:focus {
   border: 1px solid rgba(0, 0, 0, 0.3);
   outline: none;
 }
@@ -278,6 +278,7 @@
   transform: translate(-50%, -50%);
   max-width: 400px;
   width: calc(100% - 24px);
+  border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 24px;
   box-shadow: rgba(103, 111, 123, 0.2) 0px 11px 4px -7px;
@@ -288,6 +289,23 @@
 }
 .login-form .form-label + .form-control {
   margin-top: 12px;
+}
+
+.task-form-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.task-form-wrap .task-form {
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(103, 111, 123, 0.2) 0px 11px 4px -7px;
+}
+.task-form-wrap .task-form .form-control {
+  width: 100%;
+  display: block;
 }
 
 * {
@@ -324,12 +342,24 @@ h1, h2, h3, h4, h5, h6 {
   width: 100% !important;
 }
 
+.h-100 {
+  height: 100% !important;
+}
+
 .mb-3 {
   margin-bottom: 3rem;
 }
 
 .mb-2 {
   margin-bottom: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.d-block {
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */

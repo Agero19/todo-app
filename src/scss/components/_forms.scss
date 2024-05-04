@@ -52,6 +52,8 @@
     max-width: 400px;
     width: calc(100% - 24px);
 
+    border-radius: 8px;
+
     border: 1px solid rgba(#000, .1);
 
     padding: 24px;
@@ -68,4 +70,28 @@
     .form-label + .form-control {
       margin-top: 12px;
     }
+}
+
+
+// Task add form
+.task-form-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .task-form {
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid rgba(#000, .1);
+    box-shadow: rgba(103, 111, 123, 0.2) 0px 11px 4px -7px;
+
+    .form-control {
+      width: 100%;
+      display: block;
+
+      @extend .form-input;
+    }
+  }
+
 }
