@@ -1,0 +1,112 @@
+<div class="container h-100 task-form-wrap">
+  <div class="task-form">
+    <h1 class="mb-4">Add Task</h1>
+    <form
+      action="#"
+      method="post"
+    >
+      <div class="mb-3">
+        <label
+          for="title"
+          class="form-label"
+          >Task Name</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label
+          for="body"
+          class="form-label"
+          >Task Description</label
+        >
+        <textarea
+          class="form-control"
+          id="body"
+          rows="3"
+          name="body"
+        ></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label
+          for="due_date"
+          class="form-label"
+          >Due Date</label
+        >
+        <input
+          type="date"
+          class="form-control"
+          id="due_date"
+          name="due_date"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label
+          for="taskStatus"
+          class="form-label mb-1 d-block"
+          >Status</label
+        >
+
+        <div class="form-check mb-1">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="taskStatus"
+            id="taskStatusNotStarted"
+            value="not-started"
+            checked
+          />
+          <label
+            class="form-check-label"
+            for="taskStatusNotStarted"
+            >Not Started</label
+          >
+        </div>
+
+        <div class="form-check mb-1">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="taskStatus"
+            id="taskStatusInProgress"
+            value="in-progress"
+          />
+          <label
+            class="form-check-label"
+            for="taskStatusInProgress"
+            >In Progress</label
+          >
+        </div>
+
+        <div class="form-check mb-1">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="taskStatus"
+            id="taskStatusCompleted"
+            value="completed"
+          />
+          <label
+            class="form-check-label"
+            for="taskStatusCompleted"
+            >Completed</label
+          >
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-info w-100"
+      >
+        Add Task
+      </button>
+    </form>
+  </div>
+</div>
