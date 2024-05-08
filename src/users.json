@@ -1,0 +1,77 @@
+[
+    {
+        "username": "Agero19",
+        "email": "pmotulko@gmail.com",
+        "password": "$2y$10$r9x4BjXifDPTIrBS0SSh3OSI0NJvxdNiudHEGpShbmeKSx\/wGUFdK",
+        "tasks": [
+            {
+                "title": "Buy food",
+                "body": "go to local store",
+                "due_date": "17 May 2024",
+                "status": "completed"
+            },
+            {
+                "title": "Help Brother",
+                "body": "Help with homework",
+                "due_date": "29 May 2024",
+                "status": "not-started"
+            },
+            {
+                "title": "asdfasdf",
+                "body": "asdfasdf",
+                "due_date": "20 May 2024",
+                "status": "in-progress"
+            }
+        ]
+    },
+    {
+        "username": "test",
+        "email": "test@gmail.com",
+        "password": "$2y$10$DbJLa65GYiIDfHFBZcbv9ehzJ0bXU5Ir1OY8ZqLUzTdYemQ4FAYmW",
+        "tasks": []
+    },
+    {
+        "username": "testuser",
+        "email": "gurenko@gmail.com",
+        "password": "$2y$10$p9Dd.dIw3EvcQcmgek5ub.skWY3cDU7jBR8lccqjTd0K2S\/\/2GdfS",
+        "tasks": [
+            {
+                "title": "test",
+                "body": "desc test",
+                "due_date": "21 May 2024",
+                "status": "in-progress"
+            },
+            {
+                "title": "test2",
+                "body": "dedede",
+                "due_date": "10 May 2024",
+                "status": "completed"
+            }
+        ]
+    },
+    {
+        "username": "ErenJ",
+        "email": "platon2004@gmail.com",
+        "password": "$2y$10$77JeCiVKwYaFdiSz8J6gmuuzGEVgiyKiii7HhCzuN9kG9eM2jWyse",
+        "tasks": [
+            {
+                "title": "test",
+                "body": "test",
+                "due_date": "10 May 2024",
+                "status": "in-progress"
+            },
+            {
+                "title": "trtrtrtr",
+                "body": "trtsdfgdsf",
+                "due_date": "29 May 2024",
+                "status": "completed"
+            },
+            {
+                "title": "dfbxcvbsd",
+                "body": "xcvdf",
+                "due_date": "28 May 2024",
+                "status": "not-started"
+            }
+        ]
+    }
+]

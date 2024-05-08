@@ -8,6 +8,7 @@ node_modules/
 /bower_components
 bower_components/
 .vscode
+.json
 *.zip
 *.sublime*
 .sass-cache
